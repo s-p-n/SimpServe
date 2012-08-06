@@ -62,3 +62,32 @@ Finally, last but not least, there is another attribute I made called "data-src"
 And that's all there is to the client side of things- very easy, I didn't use any JavaScript (outside of the built-in client utils) at all to make these dynamic templates. Note that utils will include jQuery and socket.io, and that this is still under development and libraries such as YUI, prototype or mootools haven't been tested yet. Though I surely hope and think they will work, I simply haven't tested them- so don't expect miracles like that quite yet.
 
 Okay, next I'll walk you through the server-side of things...
+
+	var	port = 8000,
+		fs = require('fs'),
+		express = require('express'),
+		app = express(),
+		io = require('socket.io').listen(app.listen(port)),
+		router = require('./private/router')(express, app, require('./private/wa.json'));
+	var dir = fs.readdirSync('./private/channels');
+	var index;
+	var channels = [];
+	for (index in dir) {
+		channels.push(require('./private/channels/' + dir[index]));
+	}
+
+	io.sockets.on('connection', function (socket) {
+		console.log("Someone connected");
+		for (var i in channels) {
+			channels[i](socket);
+		}
+	});
+	console.log("Server started.");
+
+On this server we outsource the router's work to './private/router.js'. All the router cares about is express, app, and the webapp configuration file. I think global webapp configuration should be performed in JSON files or some database. I chose './private/wa.json' for this example server. If you open that file you will see some configurations for defaults. That configuration is only used in the router, so it should be easy to change to something that makes more sense for your needs. 
+
+We are also grabbing a list of files from the directory: './private/channels'
+
+The rest of the code is loading those files and requiring them. These files should be used for socket.io channels. This example contains a channel file "news.js" inside "./private/channels"
+
+Please see Socket.IO, Express.js, and MongoDB for further documentation on these modules.
