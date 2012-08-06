@@ -1,0 +1,23 @@
+<script src="/utils"></script>
+<link href="css" rel="stylesheet"></link>
+<fieldset>
+	<legend>Create Article</legend>
+	<form data-method="socket" data-channel="article">
+		<p>
+			<input type="text" name="headline" placeholder="Headline" required></input>
+		</p>
+		<p>
+			<textarea name="content" placeholder="Content" required></textarea>
+		</p>
+		<p>
+			<button>Submit</button>
+		</p>
+	</form>
+</fieldset>
+<div class="articles">
+	<article data-template data-channel="news">
+		<h2 data-bind="headline"></h2>
+		<span data-bind="content"></span>
+	</article>
+</div>
+<div data-src="/test"></div>
