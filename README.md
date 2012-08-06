@@ -15,7 +15,7 @@ I think I did some good things with this. I worked on a utils.js script for web-
 
 The first thing to notice is I'm including the '/utils' script. private/router.js contains an app.get() line that grabs the utils.js script and serves it.
 
-The second thing to notice is the 'data-template' and 'data-channel' attributes for the <div>. The 'data-template' attribute tells utils.js that the div is a template, and not a static HTML element. Utils will hide that DIV and use it later as a template for repeatable data. The template's parent is used to place copies of the template HTML.
+The second thing to notice is the 'data-template' and 'data-channel' attributes for the div. The 'data-template' attribute tells utils.js that the div is a template, and not a static HTML element. Utils will hide that DIV and use it later as a template for repeatable data. The template's parent is used to place copies of the template HTML.
 
 The 'data-channel' attribute has the value of 'news' which means that the DIV is listening on the 'news' socket for data. Every time we get information from the 'news' channel, the utils script will put data inside the scope of whatever element has the data-channel="news" attribute. Inside of that simple DIV template is an input box.
 
