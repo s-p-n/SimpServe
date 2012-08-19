@@ -1,0 +1,17 @@
+{
+	"defaults": {
+		"app": "main",
+		"index": "index.htm",
+		"css": "style.css",
+		"js": "script.js"
+	},
+	"redirects": [
+		["utils", "/libraries/utils.js"]
+	],
+	"extensions": {
+		"dir": "extensions"
+	},
+	"socket": {
+		"dir": "channels"
+	}
+}

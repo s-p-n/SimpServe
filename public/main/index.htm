@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+	<title>Some Title</title>
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssreset/cssreset-min.css">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssbase/cssbase-min.css">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssfonts/cssfonts-min.css">
+	<link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.6.0/build/cssgrids/grids-min.css">
+
+	<link rel="stylesheet" href="css"></link>
+	<script src="/utils"></script>
+</head>
+<body>
+	<div class="yui3-u-1-8 box h100">
+		<h1>Some Title</h1>
+		<p>
+			SomeVersion 1.0.0
+		</p>
+	</div>
+	<div class="yui3-u-3-4 box h100">
+		<h2>Account Management System</h2>
+		<p>Manage social media accounts from the cloud!</p>
+	</div>
+	<div class="yui3-u-1"></div>
+	<div id="content" class="yui3-u-5-8 box" style="height: 300px;">
+		<div data-listener data-channel="content">
+			<h1 data-bind="title">Loading..</h1>
+			<p data-bind="date">Loading..</p>
+			<div class="yui3-u-1" data-bind="body">Loading..</div>
+		</div>
+	</div>
+	<div class="yui3-u-1-4">
+		<div id="userarea" class="yui3-u-1 box">
+			<div data-src="/userarea"></div>
+		</div>
+		<div id="activity" class="yui3-u-1 box">
+			<div data-src="/activity"></div>
+		</div>
+	</div>
+	<div class="yui3-u-1"></div>
+	<div id="footer" class="yui3-u-7-8 box center">
+		<span>&copy; Somebody ~ No Rights Reserved.</span>
+	</div>
+</body>
+</html>

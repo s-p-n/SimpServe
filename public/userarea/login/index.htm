@@ -1,0 +1,9 @@
+<script src="/utils"></script>
+<form data-channel='login' data-method="socket">
+	<input type="text" name="username" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="Username" required></input>
+	<input type="password" name="password" pattern="^.{5,511}$" placeholder="Password" required></input>
+	<button>Login</button>
+</form>
+<div data-channel="login" data-listener>
+	<span data-bind="status">Not Logged In.</span>
+</div>

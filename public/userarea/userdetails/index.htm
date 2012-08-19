@@ -1,0 +1,32 @@
+<link href="css"></link>
+<script src="/utils"></script>
+<legend data-channel="userdetails" data-listener>
+	Hello, <span data-bind="username">Loading..</span>
+</legend>
+<p>
+	<a href="./">Log out</a>
+</p>
+<ul data-channel="userdetails" data-listener id="userdetails">
+	<li>
+		<strong class="yui3-u-1-4">
+			ID
+		</strong>
+		:
+		<em class="yui3-u" data-bind="_id">Loading..</em>
+	</li>
+	<li>
+		<strong class="yui3-u-1-4">
+			Username
+		</strong>
+		:
+		<em class="yui3-u" data-bind="username">Loading..</em>
+	</li>
+	<li>
+		<strong class="yui3-u-1-4">
+			Email
+		</strong>
+		:
+		<em class="yui3-u" data-bind="email">Loading..</em>
+	</li>
+</ul>
+<script src="js"></script>

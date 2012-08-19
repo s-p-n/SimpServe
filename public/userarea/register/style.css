@@ -1,0 +1,13 @@
+input {
+	border-radius: 5px 5px 0px 0px;
+}
+input:invalid {
+	border: 2px dotted red;
+}
+input:valid {
+	border: 1px inset green;
+	opacity: 0.4;
+}
+input:focus {
+	opacity: 1;
+}

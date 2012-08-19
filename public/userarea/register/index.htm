@@ -1,0 +1,29 @@
+<script src="/utils"></script>
+<link rel="stylesheet" href="css"></link>
+<form data-method="socket" data-channel="register">
+	<label for="username">
+		<input type="text" name="username" pattern="^[a-zA-Z][a-zA-Z0-9-_\.]{1,20}$" placeholder="Username" required
+			title="Usernames must begin with a letter followed by 1-20 of: letters, numbers, dashes (-), underscores (_), and/or periods (.)."></input>
+	</label>
+	<label for="email">
+		<input type="email" name="email" placeholder="Email" required
+			title="Must supply a correctly formatted Email Address."></input>
+	</label>
+	<label for="email_repeat">
+		<input type="email" name="email_repeat" placeholder="Repeat Email" required
+			title="Must supply a correctly formatted Email Address."></input>
+	</label>
+	<label for="password">
+		<input type="password" name="password" pattern=".{5,512}" placeholder="Password" data-mustMatch="password2" required
+			title="Password must contain between 5-512 characters."></input>
+	</label>
+	<label for="password_repeat">
+		<input type="password" name="password_repeat" pattern=".{5,512}" placeholder="Repeat Password" required
+			title="Password must contain between 5-512 characters."></input>
+	</label>
+	<button>Register</button>
+</form>
+<div data-listener data-channel="register">
+	<span data-bind="status"></span>
+</div>
+<script src="js"></script>
