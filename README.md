@@ -40,6 +40,7 @@ Example:
 	
 
 The result will be blue text "Hello, World":
+	
 	<script src="/libraries/utils.js"></script>
 	<div id="bar">
 		<link rel="stylesheet" href="/bar/style.css"></link>
@@ -47,6 +48,7 @@ The result will be blue text "Hello, World":
 			Hello, World!
 		</p>
 	</div>
+	
 In addition, 'style.css' may be replaced with 'css' and the above result will be renderred exactly the same (assuming the rules in '/private/config.json' file).
 
 To be continued.. 
