@@ -22,6 +22,7 @@ data-src
 ===
 The 'data-src' attribute is used to load something via the HTTP GET method. The content is loaded via AJAX and the href, src, and data-src attributes of the loaded module should be relative to the directory they are in- similar to the way external stylesheets work.
 Example:
+	
 	<!-- /foo/index.htm -->
 		<script src="utils"></script>
 		<div id="bar" data-src="/bar"></div>
@@ -36,7 +37,7 @@ Example:
 		#bar p {
 			color: blue;
 		}
-
+	
 
 The result will be blue text "Hello, World":
 	<script src="/libraries/utils.js"></script>
