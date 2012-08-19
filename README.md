@@ -14,9 +14,9 @@ The 'data-channel' attribute is used to add a socket channel to elements. You ca
 
 socket descriptors:
 ==
-- data-listener: [Usage: Affects children] Listen for data and update data bindings as needed.
-- data-template: [Usage: Duplicates self; Affects parent] Listen for data and create a new instance as needed.
-- data-method="socket": [Usage: Cancels submit] Send data to the server.
+- data-listener: [Usage: Listens and binds data and updates with each emit; Affects children] Listen for data and update data bindings as needed.
+- data-template: [Usage: Listens, duplicates self with each emit; Affects parent] Listen for data and create a new instance as needed.
+- data-method="socket": [Usage: ONLY use on form tags; Cancels default submit] Send data to the server.
 
 data-src
 ===
