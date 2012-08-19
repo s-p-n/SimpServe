@@ -6,7 +6,8 @@ What SimpServe is:
 =====
 	- A simple server/client synergy using Node.JS, Socket.IO, and jQuery.
 	- A starting point which may be useful when you build your next Node.JS web-app.
-	- A separation of Model, View, and Controller.
+	- A separation of Private (server-side) and Public (client-side) code.
+	- A separation of Model (server/data-oriented), View (client-oriented), and Controller ([General Component]<- 1001 ->[General Component] communication).
 	- A way to build dynamic web-sites in HTML and optionally JavaScript (client) and JavaScript (server).
 	- A simpler way to think about AJAX.
 	- A simpler way to think about AJAX.. Even simpler than AngularJS
