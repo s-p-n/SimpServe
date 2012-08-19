@@ -50,7 +50,7 @@ The 'data-src' attribute is used to load something via the HTTP GET method. The 
 Example:
 	
 	<!-- /foo/index.htm -->
-		<script src="utils"></script>
+		<script src="/utils"></script>
 		<div id="bar" data-src="/bar"></div>
 	
 	<!-- /bar/index.htm -->
