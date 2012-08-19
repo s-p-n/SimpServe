@@ -1,9 +1,0 @@
-{
-	"config": {
-		"defaults": {
-			"index": "index.htm",
-			"css": "style.css",
-			"js": "script.js"
-		}
-	}
-}

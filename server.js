@@ -1,20 +1,9 @@
-var	port = 8000,
-	fs = require('fs'),
-	express = require('express'),
-	app = express(),
-	io = require('socket.io').listen(app.listen(port)),
-	router = require('./private/router')(express, app, require('./private/wa.json'));
-var dir = fs.readdirSync('./private/channels');
-var index;
-var channels = [];
-for (index in dir) {
-	channels.push(require('./private/channels/' + dir[index]));
-}
-
-io.sockets.on('connection', function (socket) {
-	console.log("Someone connected");
-	for (var i in channels) {
-		channels[i](socket);
-	}
-});
+var main = {
+	express : require('express'),
+	port: 8000, 
+	fs: require('fs'), 
+	config: require('./private/config.json')
+};
+main.app = main.express();
+require('./private/init')(main);
 console.log("Server started.");
